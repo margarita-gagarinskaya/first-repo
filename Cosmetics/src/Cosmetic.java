@@ -1,0 +1,1 @@
+public class Cosmetic {    private String name;    private int price;    void displayInfo(){        System.out.println("Name: " + name);        System.out.println("Price: " + price);        }    public void setPrice(int price) {        this.price = price;    }    public Cosmetic(String name) {        this.name=name;    }    public Cosmetic(){    }}
