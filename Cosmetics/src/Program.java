@@ -2,11 +2,10 @@ public class Program {
     public static void main(String[] args) {
 
         Cosmetic Revolution = new Cosmetic("Revolution","China"); // создание объекта бренд Revolution
-            Revolution.setPrice(500);
-            //Revolution.setCountry("China");
             Revolution.displayInfo();
-        Cosmetic NIVEA = new Cosmetic("NIVEA","Germany"); // создание объекта бренд NIVEA
-            NIVEA.setPrice(150);
+        Cosmetic NIVEA = new Cosmetic(); // создание объекта бренд NIVEA
+            //NIVEA.setPrice(150);
+            NIVEA.setNameBrand("NIVEA");
             NIVEA.setCountry("Germany");
             NIVEA.displayInfo();
        }
