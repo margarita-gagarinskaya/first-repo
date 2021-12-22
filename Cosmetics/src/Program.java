@@ -22,7 +22,7 @@ public class Program {
         //System.out.println(S);
 
         Care Memo2 = new Care();
-        Memo2.Information2();
+        Memo2.Information_2();
         System.out.println(Memo2.getInfo());
      }
 }

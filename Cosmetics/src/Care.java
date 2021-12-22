@@ -7,7 +7,7 @@ public class Care extends Cosmetic {
     public void setInfo(String info) {
         Info = info;
     }
-    public void Information2() {
+    public void Information_2() {
         this.setInfo("""
                 Уходовая косметика предназначена для ухода за кожей лица,
                 тела, ногтями и волосами. Она создана для поддержания красоты
