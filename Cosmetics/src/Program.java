@@ -15,6 +15,7 @@ public class Program {
         Decorative Memo1 = new Decorative();
         //1 способ:
         Memo1.Information1();
+        System.out.println();
         System.out.println(Memo1.getInfo());
         //2 способ: вывод информации через переменную
         //Memo.Information();
@@ -24,6 +25,14 @@ public class Program {
         Care Memo2 = new Care();
         Memo2.Information_2();
         System.out.println(Memo2.getInfo());
-     }
+
+        Shadows Shad = new Shadows();
+        Shad.Sh();
+        System.out.print(Shad.getCodOfProduct() + " " + Shad.getNameOfProduct()+" " );
+        Revolution.displayInfo();
+        //бренд Revolution производит тени
+
+
+    }
 }
 
