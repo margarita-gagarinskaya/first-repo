@@ -30,7 +30,18 @@ public class Program {
         Shad.Sh();
         System.out.print(Shad.getCodOfProduct() + " " + Shad.getNameOfProduct()+" " );
         Revolution.displayInfo();
+        System.out.println("_________________________");
         //бренд Revolution производит тени
+
+        Glitters GLi1 = new Glitters();
+        GLi1.setCodOfProduct("01");
+        GLi1.setNameOfProduct("Тени");
+        GLi1.setNameBrand("NYX"+TYPE1);
+        GLi1.setCountry("США");
+        GLi1.setPrice(1150);
+        GLi1.setTone("Глиттер");
+        GLi1.setNumberOfColor(5);
+        GLi1.display();
 
 
     }
