@@ -12,15 +12,18 @@ public class Program {
             NIVEA.setCountry("Germany");
             NIVEA.displayInfo();
 
-        Decorative Memo = new Decorative();
+        Decorative Memo1 = new Decorative();
         //1 способ:
-        Memo.Information();
-        System.out.println(Memo.getInfo());
+        Memo1.Information1();
+        System.out.println(Memo1.getInfo());
         //2 способ: вывод информации через переменную
         //Memo.Information();
         //String S = Memo.getInfo(); //в переменной S результат отработки метода
         //System.out.println(S);
 
+        Care Memo2 = new Care();
+        Memo2.Information2();
+        System.out.println(Memo2.getInfo());
      }
 }
 
