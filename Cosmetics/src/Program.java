@@ -13,9 +13,13 @@ public class Program {
             NIVEA.displayInfo();
 
         Decorative Memo = new Decorative();
+        //1 способ:
         Memo.Information();
-        String S = Memo.getInfo(); //в переменной S результат отработки метода
-        System.out.println(S);
+        System.out.println(Memo.getInfo());
+        //2 способ: вывод информации через переменную
+        //Memo.Information();
+        //String S = Memo.getInfo(); //в переменной S результат отработки метода
+        //System.out.println(S);
 
      }
 }
