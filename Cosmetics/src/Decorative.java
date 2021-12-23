@@ -1,14 +1,16 @@
 public class Decorative extends Cosmetic {
-    protected String Info;
+
+    protected String info;
 
     public Decorative(){
 //конструктор по умолчанию
     }
+
     public void setInfo(String info) {
-     Info = info;
+     this.info = info;
     } //св-во поля Информация о том, что такое декоративная косметика
 
-    public void Information1() {
+    public void displayInfoAboutDecorative() {
         this.setInfo("""
         Декоративная косметика — это инструмент, с помощью которого
         можно создать дневной, вечерний образ, улучшить его,
@@ -16,12 +18,12 @@ public class Decorative extends Cosmetic {
         Декоративная косметика — это набор специальных средств,
         с помощью которых создается макияж.
         К ней относятся: тональные средства, корректоры, румяна,
-        средства для губ,  декоративные средства для глаз и бровей.
+        средства для губ, декоративные средства для глаз и бровей.
         """);
         //вызвали свойство set
-
     }
+
     public String getInfo() {
-        return Info;
+        return info;
     }
 }

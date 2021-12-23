@@ -1,29 +1,31 @@
 public class Shadows extends Decorative {
 
-    protected String NameOfProduct;
-    protected String CodOfProduct;
+    protected String shadowProductName;
+    protected String shadowProductCode;
+
     public Shadows() {
         //конструктор по умолчанию
     }
 
-    public void setNameOfProduct(String nameOfProduct) {
-        NameOfProduct = nameOfProduct;
+    public void setShadowProductName(String shadowProductName) {
+        this.shadowProductName = shadowProductName;
     }
 
-    public void setCodOfProduct(String codOfProduct) {
-        CodOfProduct = codOfProduct;
-    }
-    public void Sh() {
-        this.setCodOfProduct("01");
-        this.setNameOfProduct("Тени");
+    public void setShadowProductCode(String shadowProductCode) {
+        this.shadowProductCode = shadowProductCode;
     }
 
-    public String getCodOfProduct() {
-        return CodOfProduct;
+    public void setCodeAndName(String nameOfProduct, String codOfProduct) {
+        this.setShadowProductCode(nameOfProduct);
+        this.setShadowProductName(codOfProduct);
     }
 
-    public String getNameOfProduct() {
-        return NameOfProduct;
+    public String getShadowProductCode() {
+        return shadowProductCode;
+    }
+
+    public String getShadowProductName() {
+        return shadowProductName;
     }
 }
 

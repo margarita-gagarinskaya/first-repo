@@ -1,28 +1,30 @@
 public class Hair extends Care {
 
-    protected String NameOfProduct;
-    protected String CodOfProduct;
+    protected String hairProductName;
+    protected String hairProductCod;
+
     public Hair() {
         //конструктор по умолчанию
     }
 
-    public void setNameOfProduct(String nameOfProduct) {
-        NameOfProduct = nameOfProduct;
+    public void setHairProductName(String hairProductName) {
+        this.hairProductName = hairProductName;
     }
 
-    public void setCodOfProduct(String codOfProduct) {
-        CodOfProduct = codOfProduct;
-    }
-    public void Ha() {
-        this.setCodOfProduct("03");
-        this.setNameOfProduct("Средства для волос|");
+    public void setHairProductCod(String hairProductCod) {
+        this.hairProductCod = hairProductCod;
     }
 
-    public String getCodOfProduct() {
-        return CodOfProduct;
+    public void setCodeAndName(String nameOfProduct, String codOfProduct) {
+        this.setHairProductCod(nameOfProduct);
+        this.setHairProductName(codOfProduct);
     }
 
-    public String getNameOfProduct() {
-        return NameOfProduct;
-    }
+//    public String getCodOfProduct() {
+//        return codOfProduct;
+//    }
+//
+//    public String getNameOfProduct() {
+//        return nameOfProduct;
+//    }
 }

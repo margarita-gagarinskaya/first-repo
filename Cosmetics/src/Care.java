@@ -1,13 +1,16 @@
 public class Care extends Cosmetic {
-    protected String Info;
+
+    protected String info;
 
     public Care() {
         //конструктор по умолчанию
     }
+
     public void setInfo(String info) {
-        Info = info;
+        this.info = info;
     }
-    public void Information_2() {
+
+    public void displayInfoAboutCare() {
         this.setInfo("""
                 Уходовая косметика предназначена для ухода за кожей лица,
                 тела, ногтями и волосами. Она создана для поддержания красоты
@@ -15,7 +18,8 @@ public class Care extends Cosmetic {
                 проблем – от повышенной жирности до преждевременного старения.
                 """);
     }
+
     public String getInfo() {
-        return Info;
+        return info;
     }
 }

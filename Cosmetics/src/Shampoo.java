@@ -1,18 +1,19 @@
 public class Shampoo  extends Hair {
-    public String ScalpType;
+
+    public String scalpType;
 
     public Shampoo() {
         //конструктор по умолчанию
     }
 
     public void setScalpType(String scalpType) {
-        ScalpType = scalpType;
+        this.scalpType = scalpType;
     }
 
-    public void display() {
+    public void displayFullInfoAboutShampoo() {
         System.out.printf("Код продукта: %s \tНаименовние продукта: %s \tТип кожи головы: %s \t" +
-                        "Бренд: %s\tСтрана: %s\tЦена: %d\n", CodOfProduct, NameOfProduct, ScalpType,
-                NameBrand, country, Price);
+                        "Бренд: %s\tСтрана: %s\tЦена: %d\n", hairProductCod, hairProductName, scalpType,
+                nameBrand, country, price);
 
     }
 }
