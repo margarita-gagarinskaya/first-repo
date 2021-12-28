@@ -69,6 +69,14 @@ public class Program {
         Sham.displayFullInfoAboutShampoo();
         System.out.println("_________________________");
 
+        //работа с Интерфейсами//
+        // создание объекта люксовый бренд Chanel
+        Cosmetic Chanel = new Cosmetic();
+        Chanel.setNameBrand("Chanel - "+ ILuxury.CATEGORY + ".");
+        Chanel.setCountry("France");
+        System.out.println("\n");
+        System.out.println("Интерфейс для класа Cosmetic ниже");
+        Chanel.displayLuxuryBrand();
     }
 }
 
