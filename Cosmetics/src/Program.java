@@ -19,7 +19,7 @@ public class Program {
         //Создание информационной справки про декоративную косметику
         Decorative Memo1 = new Decorative();
         //1 способ:
-        Memo1.displayInfoAboutDecorative();
+        Memo1.displayNameAndCountry();
         System.out.println();
         System.out.println(Memo1.getInfo());
         //2 способ: вывод информации через переменную
@@ -77,6 +77,22 @@ public class Program {
         System.out.println("\n");
         System.out.println("Интерфейс для класа Cosmetic ниже");
         Chanel.displayLuxuryBrand();
+
+        //создание объекта люксовый декоративный бренд Кайли Косметикс
+        Decorative KylieCosmetics = new Decorative();
+        KylieCosmetics.setNameBrand("KylieCosmetics - "+ ILuxury.CATEGORY + ".");
+        KylieCosmetics.setProductOfBrand("Kylie Lip Kits, Тени");
+        System.out.println("\n");
+        System.out.println("Интерфейс для класа Decorative ниже");
+        KylieCosmetics.displayLuxuryBrand();
+
+        ILuxury Eda = new Product();
+        Cosmetic Decor = new Decorative();
+        Product Eda1 = new Product();
+        Shop.method(Eda);
+        Shop.method(KylieCosmetics);
+        Shop.method(Eda1);
+
     }
 }
 
