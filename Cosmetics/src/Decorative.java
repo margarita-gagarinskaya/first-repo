@@ -15,7 +15,7 @@ public class Decorative extends Cosmetic  {//implements ILuxury
         this.productOfBrand = productOfBrand;
     }
 
-    public void displayNameAndCountry() { //displayNameAndCountry
+    public void displayInfoAboutDecorative() {
         this.setInfo("""
         Декоративная косметика — это инструмент, с помощью которого
         можно создать дневной, вечерний образ, улучшить его,
