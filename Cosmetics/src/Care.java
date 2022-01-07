@@ -1,6 +1,7 @@
 public class Care extends Cosmetic {
 
     protected String info;
+    protected String productOfBrand;
 
     public Care() {
         //конструктор по умолчанию
@@ -8,6 +9,10 @@ public class Care extends Cosmetic {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public void setProductOfBrand(String productOfBrand) {
+        this.productOfBrand = productOfBrand;
     }
 
     public void displayInfoAboutCare() {
@@ -21,5 +26,9 @@ public class Care extends Cosmetic {
 
     public String getInfo() {
         return info;
+    }
+
+    public void displayLuxuryBrand() {
+        System.out.printf("%s\tПроизводит: %s. \n", nameBrand, productOfBrand);
     }
 }
