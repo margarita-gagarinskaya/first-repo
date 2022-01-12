@@ -165,6 +165,9 @@ public class Program {
         System.out.println("Интерфейс для класа Shampoo ниже");
         LuxCP1.displayLuxuryBrand();
         System.out.println("_________________________");
+
+        UpdateCosmetic.updateData(NIVEA, "25").displayInfoAboutDecorative();
+
     }
 }
 
