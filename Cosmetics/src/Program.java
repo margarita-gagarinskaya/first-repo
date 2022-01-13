@@ -167,6 +167,20 @@ public class Program {
         System.out.println("_________________________");
 
         UpdateCosmetic.updateData(NIVEA, "25").displayInfoAboutDecorative();
+        System.out.println("_________________________");
+
+        Glitters GLiti = new Glitters();
+        GLiti.setNameBrand("Tati");
+        GLiti.setCountry("США");
+        GLiti.setTone("Глиттер");
+        //____//
+        Glitters Satin = new Glitters();
+        Satin.setNameBrand("HUDA");
+        Satin.setCountry("США");
+        Satin.setTone("Сатин");
+        //____//
+        Cosmetic L = UpdateCosmetic.joinTwoObject(GLiti, NIVEA);
+        L.displayInfoAboutDecorative();
 
     }
 }

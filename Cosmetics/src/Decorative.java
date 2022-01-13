@@ -16,6 +16,7 @@ public class Decorative extends Cosmetic  {//implements ILuxury
     }
 
     public void displayInfoAboutDecorative() {
+        super.displayInfoAboutDecorative();
         this.setInfo("""
         Декоративная косметика — это инструмент, с помощью которого
         можно создать дневной, вечерний образ, улучшить его,
@@ -25,6 +26,7 @@ public class Decorative extends Cosmetic  {//implements ILuxury
         К ней относятся: тональные средства, корректоры, румяна,
         средства для губ, декоративные средства для глаз и бровей.
         """);
+        System.out.println("111");
         //вызвали свойство set
     }
 
