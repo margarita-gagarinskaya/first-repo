@@ -6,17 +6,40 @@ public class Authorization{
     public static boolean verification (String login, String password, String confirmPassword) {
 
         try {
+            Pattern patternLog = Pattern.compile("\\W");
+            Matcher matcherLog = patternLog.matcher(login);
+            Pattern patternPas = Pattern.compile("\\W");
+            Matcher matcherPas = patternPas.matcher(password);
+            if (matcherLog.find() & matcherPas.find()) {
+                throw new WrongPasswordException("В логине и пароле используются иные символы кроме латиницы, цыфр и нижнего подчеркивания");
+            }
+
             if (login.length()>20){
                 throw new WrongLoginException("Введите логин менее 20 символов");
             }
-                Pattern pattern = Pattern.compile("\\W");
-                Matcher matcher = pattern.matcher(login);
-                if (matcher.find()) {
-                    throw new WrongLoginException("Не используйте иные символы кроме латиницы, цыфр, нижнего подчеркивания");
+                Pattern patternLogin = Pattern.compile("\\W");
+                Matcher matcherLogin = patternLogin.matcher(login);
+                if (matcherLogin.find()) {
+                    throw new WrongLoginException("Не используйте иные символы в логине кроме латиницы, цыфр, нижнего подчеркивания");
                 }
             System.out.println("Логин введен успешно");
+
+            if (password.length()>20){
+                throw new WrongPasswordException("Пароль должен быть меньше 20 символов");
+            }
+            Pattern patternPassword = Pattern.compile("\\W");
+            Matcher matcherPassword = patternPassword.matcher(password);
+            if (matcherPassword.find()) {
+                throw new WrongPasswordException("Не используйте иные символы в пароле кроме латиницы, цыфр и нижнего подчеркивания");
+            }
+            if (password.equals(confirmPassword)){
+                System.out.println("Пароль введен успешно, пароли совпадают");
+            }
+            else {
+                throw new WrongPasswordException("Пароли не совпадают");
+            }
         }
-        catch (WrongLoginException e) {
+        catch (WrongLoginException|WrongPasswordException e) {
             System.out.println(e.getMessage());
         }
         return true;
