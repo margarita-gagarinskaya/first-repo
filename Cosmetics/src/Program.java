@@ -1,3 +1,4 @@
+import java.util.HashSet;
 public class Program {
 
     public static void main(String[] args) {
@@ -169,6 +170,7 @@ public class Program {
         UpdateCosmetic.updateData(NIVEA, "25").displayInfoAboutDecorative();
         System.out.println("_________________________");
 
+        //слияние двух объектов
         Glitters GLiti = new Glitters();
         GLiti.setNameBrand("Tati");
         GLiti.setCountry("США");
@@ -181,7 +183,20 @@ public class Program {
         //____//
         Cosmetic L = UpdateCosmetic.joinTwoObject(GLiti, NIVEA);
         L.displayInfoAboutDecorative();
+        System.out.println("_________________________");
 
+        //1 со 2, 2 с 1
+        Cosmetic[] Cos1 = new Cosmetic[4];
+        Cos1[0]=new Cosmetic("a","1");
+        Cos1[1]=new Cosmetic("b","2");
+        Cos1[2]=new Cosmetic("c","3");
+        Cos1[3]=new Cosmetic("d","4");
+        UpdateCosmetic.joinPairObject(Cos1);
+
+
+//        for(Cosmetic c : Cos1){
+//            System.out.printf("Бренд: %s |\tСтрана производитель: %s\n", c.getNameBrand(), c.getCountry());
+//        }
     }
 }
 
