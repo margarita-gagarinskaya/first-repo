@@ -191,12 +191,12 @@ public class Program {
         Cos1[1]=new Cosmetic("b","2");
         Cos1[2]=new Cosmetic("c","3");
         Cos1[3]=new Cosmetic("d","4");
-        UpdateCosmetic.joinPairObject(Cos1);
-
-
-//        for(Cosmetic c : Cos1){
-//            System.out.printf("Бренд: %s |\tСтрана производитель: %s\n", c.getNameBrand(), c.getCountry());
-//        }
+        //UpdateCosmetic.joinPairObject(Cos1);
+        System.out.println("_________________________");
+        Cos1 = UpdateCosmetic.joinSort(Cos1);
+        for(Cosmetic c : Cos1){
+            System.out.printf("Бренд: %s |\tСтрана производитель: %s\n", c.getNameBrand(), c.getCountry());
+        }
     }
 }
 
