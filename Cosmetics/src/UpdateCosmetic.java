@@ -1,9 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 public class UpdateCosmetic {
 
     public static Cosmetic updateData(Cosmetic upNew, String S) {
@@ -40,22 +34,30 @@ public class UpdateCosmetic {
 //подать в метод объекты, склеить у них поля в формате 1+2+..i...+N, 2+1+3+...i...+N, 3+1+2+4+...i...+N
 // получить их из метода и с помощью цикла foreach вывести эти поля на экран
 
-    public static Cosmetic[] joinSort(Cosmetic[] cosmeticProduct) {
+    public static Cosmetic[] joinWithForEach(Cosmetic[] cosmeticProduct) {
+        return setEveryJoinElements(cosmeticProduct, joinElementsNB(cosmeticProduct), joinElementsC(cosmeticProduct));
+    }
 
-//        for (int i=1;i < cosmeticProduct.length; i++) {
-//                cosmeticProduct[0].setNameBrand(cosmeticProduct[0].getNameBrand() + cosmeticProduct[i].getNameBrand());
-//                cosmeticProduct[0].setCountry(cosmeticProduct[0].getCountry() + cosmeticProduct[i].getCountry());
-//        }
-//        for (int k=1; k<cosmeticProduct.length; k++) {
-//            cosmeticProduct[k].setNameBrand(cosmeticProduct[0].getNameBrand());
-//            cosmeticProduct[k].setCountry(cosmeticProduct[0].getCountry());
-//        }
-        String s="";
-        String s1="";
+//Переписать метод, теперь в нем используется цикл форыч и нужно чтобы у всех объектов внутри
+// в полях суммированная строка была упорядочена по возрастанию (1234..., 1234..., 1234...)
+
+    public static String joinElementsNB(Cosmetic[] cosmeticProduct) {
+        String s = "";
         for (Cosmetic c : cosmeticProduct) {
-            s=s + c.getNameBrand();
-            s1=s1 + c.getCountry();
+            s = s + c.getNameBrand();
         }
+        return s;
+    }
+
+    public static String joinElementsC(Cosmetic[] cosmeticProduct) {
+        String s = "";
+        for (Cosmetic c : cosmeticProduct) {
+            s = s + c.getCountry();
+        }
+        return s;
+    }
+
+    public static Cosmetic[] setEveryJoinElements(Cosmetic[] cosmeticProduct,String s,String s1) {
         for (Cosmetic g:cosmeticProduct) {
             g.setNameBrand(s);
             g.setCountry(s1);
@@ -63,5 +65,3 @@ public class UpdateCosmetic {
         return cosmeticProduct;
     }
 }
-//Переписать метод, теперь в нем используется цикл форыч и нужно чтобы у всех объектов внутри
-// в полях суммированная строка была упорядочена по возрастанию (1234..., 1234..., 1234...)
