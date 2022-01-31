@@ -1,6 +1,7 @@
-public class Decorative extends Cosmetic {
+public class Decorative extends Cosmetic  {//implements ILuxury
 
     protected String info;
+    protected String productOfBrand;
 
     public Decorative(){
 //конструктор по умолчанию
@@ -10,7 +11,12 @@ public class Decorative extends Cosmetic {
      this.info = info;
     } //св-во поля Информация о том, что такое декоративная косметика
 
+    public void setProductOfBrand(String productOfBrand) {
+        this.productOfBrand = productOfBrand;
+    }
+
     public void displayInfoAboutDecorative() {
+        super.displayInfoAboutDecorative();
         this.setInfo("""
         Декоративная косметика — это инструмент, с помощью которого
         можно создать дневной, вечерний образ, улучшить его,
@@ -20,10 +26,14 @@ public class Decorative extends Cosmetic {
         К ней относятся: тональные средства, корректоры, румяна,
         средства для губ, декоративные средства для глаз и бровей.
         """);
+        System.out.println("111");
         //вызвали свойство set
     }
 
     public String getInfo() {
         return info;
+    }
+    public void displayLuxuryBrand() {
+        System.out.printf("%s\tПроизводит: %s, \n", nameBrand, productOfBrand);
     }
 }

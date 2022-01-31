@@ -15,9 +15,9 @@ public class Shadows extends Decorative {
         this.shadowProductCode = shadowProductCode;
     }
 
-    public void setCodeAndName(String nameOfProduct, String codOfProduct) {
-        this.setShadowProductCode(nameOfProduct);
-        this.setShadowProductName(codOfProduct);
+    public void setCodeAndName(String codOfProduct, String nameOfProduct) {
+        this.setShadowProductCode(codOfProduct);
+        this.setShadowProductName(nameOfProduct);
     }
 
     public String getShadowProductCode() {
@@ -26,6 +26,10 @@ public class Shadows extends Decorative {
 
     public String getShadowProductName() {
         return shadowProductName;
+    }
+
+     public void displayLuxuryBrand() {
+         System.out.printf("Код: %s\tНазвание: %s \n", shadowProductCode, shadowProductName);
     }
 }
 
