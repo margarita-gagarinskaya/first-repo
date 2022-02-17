@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,8 +15,8 @@ public class FirstTest {
         String url = "https://mail.yandex.ru/?uid=1561621129#inbox";
         String address = "gagarinskayam@yandex.ru";
         String password = "Jpldmc765!_mdikfco";
-        String whom = "barnie3121@gmail.com";
-        String textOfMassage= "Отправляется тестовое письмо в автоматическом режиме";
+        String whom0 = "vairys_kat@mail.ru";
+        String textOfMassage0= "Завтра к 9:00";
         System.setProperty("webdriver.chrome.driver", "D:/Program Files/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
 
@@ -43,23 +44,36 @@ public class FirstTest {
         WebElement message = (new WebDriverWait(driver,  Duration.ofSeconds(20)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class*=cke_wysiwyg_div] >div")));
         message.click();
-        message.sendKeys(textOfMassage);
+        message.sendKeys(textOfMassage0);
 
         WebElement toWhom = (new WebDriverWait(driver,  Duration.ofSeconds(10)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[contenteditable]")));
         toWhom.click();
-        toWhom.sendKeys(whom);
+        toWhom.sendKeys(whom0);
 
         WebElement send = (new WebDriverWait(driver,  Duration.ofSeconds(10)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.ComposeControlPanel-Part " +
                         ">div >button[type=button]")));
         send.click();
 
+        WebElement sentMessages = (new WebDriverWait(driver,  Duration.ofSeconds(20)))
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("a[data-title=Отправленные]")));
+        sentMessages.click();
 
+        WebElement firstOnTheSentList = (new WebDriverWait(driver,  Duration.ofSeconds(20)))
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[data-id=t178455135234555923] > div > a")));
+        firstOnTheSentList.click();
 
+        WebElement bodyOfMessage = (new WebDriverWait(driver,  Duration.ofSeconds(20)))
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.MessageBody_body_pmf3j >div")));
+        String textOfMessage1 = bodyOfMessage.getText();
+        System.out.println(textOfMessage1);
+        Assert.assertEquals("Тексты писем не совпадают", textOfMassage0, textOfMessage1);
 
+        WebElement bodyOfLetterRecipient = (new WebDriverWait(driver,  Duration.ofSeconds(10)))
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class*=Cut_expander] >div")));
+        String whom1 = bodyOfLetterRecipient.getText();
+        System.out.println(whom1);
+        Assert.assertEquals("Адреса получателей не совпадают", whom0, whom1);
     }
-
 }
-//div.ns-view-compose-buttons-box." +
-//        "ns-view-id-95 > div > div > div > a
